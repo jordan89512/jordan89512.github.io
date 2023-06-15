@@ -55,9 +55,9 @@ a {
 
 #topnav{
     padding-left: 3%;
-    box-shadow: 0px 0px 30px 10px black;
-    /* border-bottom: 1px solid #00eeff; */
+    box-shadow: 0px 0px 30px 10px #454eff;
     min-height: 50px;
+    z-index: 999;
 }
 
 .dropbtn:hover {
@@ -179,4 +179,81 @@ a {
         padding-top: 17px;
         margin: 0;
     }
+
+    .name {
+      font-size: 1rem !important;
+      left: 60% !important;
+    }
+    .developer {
+      font-size: 1.2rem !important;
+      top: 30px !important;
+    }
+    .greeting {
+      top: 10% !important;
+      left: 57% !important;
+      font-size: 2rem !important;
+    }
+  }
+
+  #imgContainer {
+    background-image: url(/assets/images/profile-pic\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 30%;
+    max-height: 30%;
+    max-width: 50%;
+    position: relative;
+    top: 10%;
+    left: 25%;
+    filter: drop-shadow(-5px 5px 5px black)
+  }
+
+  #hello {
+    min-height: 80px;
+    max-height: 100px;
+    max-width: 400px;
+    min-width: 260px;
+    position: relative;
+    left: 32%;
+    top: 150px;
+    background-color: #454eff;
+    border-radius: 1em;
+    box-shadow: -5px 5px 15px 5px black;
+    text-align: center;
+  }
+
+  .greeting {
+    position: absolute;
+    top: 14%;
+    left: 52%;
+    font-size: 3rem;
+    z-index: 3;
+    text-shadow: #000000 -3px 2px 5px;
+  }
+
+  .name {
+    position: absolute;
+    top: 25%;
+    left: 51%;
+    font-weight: bolder;
+    font-size: 2rem;
+    padding: 20px;
+    background-image: linear-gradient(to right, blue, #45ff89);
+    border-radius: .6em;
+    text-shadow: -5px 2px 5px black;
+    box-shadow: -5px 5px 15px 5px black;
+    z-index: 2;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+
+  .developer {
+    position: relative;
+    top: 25px;
+    left: 0px;
+    min-width: 200px;
+    min-height: 40px;
+    max-height: 40px;
+    text-shadow: -2px 1px 2px black;
+    font-size: 1.8rem;
+    font-family: 'Courier New', Courier, monospace;
   }
