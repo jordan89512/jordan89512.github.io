@@ -16,20 +16,21 @@
         <nav id="nav" role="navigation">
             <div class="topnav" id="topnav">
                 <a href="#home">Home</a>
-                <a href="#resume">Resume</a>
+                <a href="#background">Background</a>
                 <a href="#contact">Contact</a>
                 <div class="dropdown">
-                    <button class="dropbtn">Projects
+                    <button class="dropbtn"><a href="#projects" style="margin: 0; padding: 0; padding-right: 5px;" title="All Projects">Projects</a>
                         <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="#">Link 1</a>
-                        <a href="#">Link 2</a>
-                        <a href="#">Link 3</a>
+                        <a href="./pages/quantcalc/index.html" target="_blank">Quantities Calculator</a>
+                        <a href="./pages\webdevnexus-main\index.html" target="_blank">WebDevNexus Site</a>
+                        <a href="./pages/Training-ui/index.html" target="_blank">Company Training UI</a>
+                        <a href="#">Link 4</a>
                     </div>
                 </div>
 
-                <p id="name">Jordan Roberts - Dev Portfolio</p>
+                <p id="name">Jordan Roberts</p>
                 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropFunction()">&#9776;</a>
             </div>
         </nav>
@@ -39,11 +40,13 @@
     <h1 class="greeting">Hi, I'm</h1>
     <h2 class="name">Jordan Roberts</h2>
     <h3 class="developer">Full-Stack Developer_</h3>
+    <a href="https://github.com/jordan89512" target="_blank"><img src="/assets/icons/github-mark-white.png" alt="github logo" id="gitLogo" title="GitHub"></a>
 
     <!-- Profile Image -->
     <div id="imgContainer"></div>
 
     <section id="section1">
+        <p id="projects"></p>
         <h3>section 1</h3>
         <div id="projectContainer">
             <!-- Grid Layout for Project images -->

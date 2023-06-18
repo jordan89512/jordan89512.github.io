@@ -1,0 +1,915 @@
+* {
+  text-decoration: none; /*Remove underline from links*/
+}
+
+::-webkit-scrollbar {
+  display: none; /*Remove scrollbar from chrome*/
+}
+
+body,
+html {
+  margin: 0px; /*Removes margin from page body globally*/
+  scrollbar-width: none; /*Removes scrollbar for some browsers*/
+}
+
+body {
+  background-image: linear-gradient(
+    180deg,
+    rgb(0, 0, 0),
+    rgb(0, 60, 255),
+    rgb(0, 247, 255)
+  ); /*Adds background color*/
+  min-height: 200vh; /*Makes body twice the size of viewport height on y-axis*/
+  font-family: "Poppins", sans-serif; /*Sets font family globally*/
+  position: relative; /*set so you can position footer*/
+}
+
+/*================================END OF GLOBAL=========================================*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    background: black;
+    min-height: 20em; /*Sets height of header box*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  #header-logo {
+    margin: 0px;
+    padding: 1em;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 5em;
+    color: white;
+    text-shadow: rgb(1, 217, 255) 3px 3px 15px;
+    cursor: pointer;
+  }
+
+  nav {
+    background: linear-gradient(black, rgb(25, 0, 255), rgb(0, 247, 255));
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 4em;
+    max-height: 4em;
+    display: inline-flex;
+    text-align: center;
+  }
+
+  #nav {
+    /*Link buttons - navigation*/
+    overflow: hidden;
+    border: solid 1px rgb(255, 255, 255);
+    border-radius: 0.4em;
+    margin: 0px;
+    padding: 1%;
+    padding-top: 3.9%; /*Moves letters of links down to center*/
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: white;
+    min-width: 6em;
+    max-width: 6em;
+  }
+  #welcome {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 3em;
+    min-height: 40vh; /*Unless specified under breakpoints*/
+    max-height: 40vh; /*Unless specified under breakpoints*/
+    max-width: 80vw;
+    border: rgb(255, 255, 255) solid 2px;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    background: rgba(0, 0, 0, 0.342);
+    overflow-y: scroll;
+  }
+
+  .intrograph {
+    /*Global value unless specified under breakpoints*/
+    padding: 1em;
+    padding-top: 0.5em;
+  }
+
+  h2 {
+    padding: 1em;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  header {
+    background: black;
+    min-height: 20em; /*Sets height of header box*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  #header-logo {
+    margin: 0px;
+    padding: 1em;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 5em;
+    color: white;
+    text-shadow: rgb(1, 217, 255) 3px 3px 15px;
+    cursor: pointer;
+  }
+
+  nav {
+    background: linear-gradient(black, rgb(25, 0, 255), rgb(0, 247, 255));
+    /*border: solid 1px green;*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    min-width: 99.9%;
+    min-height: 4em;
+    max-height: 4em;
+    display: inline-flex;
+    text-align: center;
+  }
+
+  #nav {
+    /*Link buttons - navigation*/
+    margin: 0px;
+    padding: 1%;
+    padding-top: 3.3%; /*Moves letters of links down to center*/
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: white;
+    min-width: 6em;
+    max-width: 6em;
+  }
+
+  #nav:hover {
+    border: rgb(0, 238, 255) solid 2px;
+    border-radius: 1em;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    transition: 0.1s;
+
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  #nav:visited {
+    color: white;
+  }
+
+  #welcome {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 3em;
+    min-height: 40vh; /*Unless specified under breakpoints*/
+    max-height: 40vh; /*Unless specified under breakpoints*/
+    max-width: 80vw;
+    border: rgb(255, 255, 255) solid 2px;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    background: rgba(0, 0, 0, 0.342);
+    overflow-y: scroll;
+  }
+
+  .intrograph {
+    /*Global value unless specified under breakpoints*/
+    padding: 4em;
+    padding-top: 0em;
+  }
+  h2 {
+    padding: 1em;
+    padding-bottom: 0em;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  header {
+    background: black;
+    min-height: 20em; /*Sets height of header box*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  #header-logo {
+    margin: 0px;
+    padding: 1em;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 5em;
+    color: white;
+    text-shadow: rgb(1, 217, 255) 3px 3px 15px;
+    cursor: pointer;
+  }
+
+  #header-logo:hover {
+    transition: 1s;
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  nav {
+    background: linear-gradient(black, rgb(25, 0, 255), rgb(0, 247, 255));
+    /*border: solid 1px green;*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    min-width: 99.9%;
+    min-height: 4em;
+    max-height: 4em;
+    display: inline-flex;
+    text-align: center;
+  }
+
+  #nav {
+    /*buttons links*/
+    margin: 0px;
+    padding: 1%;
+    padding-top: 3%; /*Moves letters of links down to center*/
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: white;
+    min-width: 6em;
+    max-width: 6em;
+  }
+
+  #nav:hover {
+    padding-top: 20px;
+    border: rgb(0, 238, 255) solid 2px;
+    border-radius: 1em;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    transition: 0.1s;
+
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  #nav:visited {
+    color: white;
+  }
+
+  #welcome {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 3em;
+    min-height: 40vh; /*Unless specified under breakpoints*/
+    max-height: 40vh; /*Unless specified under breakpoints*/
+    max-width: 80vw;
+    border: rgb(255, 255, 255) solid 2px;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    background: rgba(0, 0, 0, 0.342);
+    overflow-y: scroll;
+  }
+
+  .intrograph {
+    /*Global value unless specified under breakpoints*/
+    padding: 4em;
+    padding-top: 1em;
+  }
+
+  h2 {
+    padding: 1em;
+    padding-bottom: 0em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  header {
+    background: black;
+    min-height: 25em; /*Sets height of header box*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  #header-logo {
+    margin: 0px;
+    padding: 1em;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 5em;
+    color: white;
+    text-shadow: rgb(1, 217, 255) 3px 3px 15px;
+    cursor: pointer;
+  }
+
+  #header-logo:hover {
+    transition: 1s;
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  nav {
+    background: linear-gradient(black, rgb(25, 0, 255), rgb(0, 247, 255));
+    /*border: solid 1px green;*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    min-width: 99.9%;
+    min-height: 4em;
+    max-height: 4em;
+    display: inline-flex;
+    text-align: center;
+  }
+
+  #nav {
+    /*Link buttons - navigation*/
+    margin: 0px;
+    padding: 1%;
+    padding-top: 2.3%; /*Moves letters of links down to center*/
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: white;
+    min-width: 6em;
+    max-width: 6em;
+  }
+
+  #nav:hover {
+    border: rgb(0, 238, 255) solid 2px;
+    border-radius: 1em;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    transition: 0.1s;
+
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  #nav:visited {
+    color: white;
+  }
+
+  #welcome {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 3em;
+    min-height: 40vh; /*Unless specified under breakpoints*/
+    max-height: 40vh; /*Unless specified under breakpoints*/
+    max-width: 80vw;
+    border: rgb(255, 255, 255) solid 2px;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    background: rgba(0, 0, 0, 0.342);
+    overflow-y: scroll;
+  }
+
+  .intrograph {
+    /*Global value unless specified under breakpoints*/
+    padding: 4em;
+    padding-top: 1em;
+  }
+
+  h2 {
+    padding: 1em;
+    padding-bottom: 0em;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1140px) {
+  header {
+    background: black;
+    min-height: 30em; /*Sets height of header box*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  #header-logo {
+    margin: 0px;
+    padding: 1em;
+    padding-top: 2em; /*Centers logo on this breakpoint*/
+    text-align: center;
+    font-weight: lighter;
+    font-size: 5em;
+    color: white;
+    text-shadow: rgb(1, 217, 255) 3px 3px 15px;
+    cursor: pointer;
+  }
+
+  #header-logo:hover {
+    transition: 1s;
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  nav {
+    background: linear-gradient(black, rgb(25, 0, 255), rgb(0, 247, 255));
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    min-width: 99.9%;
+    min-height: 4em;
+    max-height: 4em;
+    display: inline-flex;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  #nav {
+    /*Link buttons - navigation*/
+    margin: 0px;
+    padding: 1%;
+    padding-top: 1.9%; /*Moves letters of links down to center*/
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: white;
+    min-width: 6em;
+    max-width: 6em;
+  }
+
+  #nav:hover {
+    padding-top: 20px;
+    border: rgb(0, 238, 255) solid 2px;
+    border-radius: 1em;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    transition: 0.1s;
+
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  #nav:visited {
+    color: white;
+  }
+
+  #logo {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.349);
+  }
+  #welcome {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 3em;
+    min-height: 60vh;
+    max-height: 60vh;
+    max-width: 80vw;
+    border: rgb(255, 255, 255) solid 2px;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    background: rgba(0, 0, 0, 0.342);
+    overflow-y: scroll;
+  }
+
+  .intrograph {
+    padding: 3em;
+    padding-top: 1em;
+  }
+  /*=======================*/
+}
+@media only screen and (min-width: 1520px) {
+  header {
+    background: black;
+    min-height: 30em; /*Sets height of header box*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+
+  #header-logo {
+    margin: 0px;
+    padding: 1em;
+    padding-top: 2em; /*Centers logo for this breakpoint*/
+    text-align: center;
+    font-weight: lighter;
+    font-size: 5em;
+    color: white;
+    text-shadow: rgb(1, 217, 255) 3px 3px 15px;
+    cursor: pointer;
+  }
+
+  #header-logo:hover {
+    transition: 1s;
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  nav {
+    background: linear-gradient(black, rgb(25, 0, 255), rgb(0, 247, 255));
+    /*border: solid 1px green;*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    min-width: 99.9%;
+    min-height: 4em;
+    max-height: 4em;
+    display: inline-flex;
+    text-align: center;
+    font-size: 1em;
+  }
+
+  #nav {
+    /*Link buttons - navigation*/
+    /*border: solid 1px blue;*/
+    margin: 0px;
+    padding: 1%;
+    padding-top: 1.2%; /*Moves letters of links down to center*/
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: white;
+    min-width: 6em;
+    max-width: 6em;
+  }
+
+  #nav:hover {
+    border: rgb(0, 238, 255) solid 2px;
+    border-radius: 1em;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    transition: 0.1s;
+
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+
+  #nav:visited {
+    color: white;
+  }
+
+  #welcome {
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 3em;
+    min-height: 80vh;
+    max-height: 80vh;
+    max-width: 80vw;
+    border: rgb(255, 255, 255) solid 2px;
+    box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+    background: rgba(0, 0, 0, 0.342);
+    overflow-y: scroll;
+  }
+  .intrograph {
+    padding: 7em;
+    padding-top: 1em;
+  }
+
+  /*=======================*/
+}
+
+/*GLOBAL*/
+
+#welcome {
+    margin-bottom: 5em;
+    border-radius: 1em;
+}
+
+nav {
+    box-shadow: rgb(0, 238, 255) 3px 5px 55px;
+    border-radius: .4em;
+}
+
+#ablogo {
+    position: absolute;
+    max-width: 20%;
+    z-index: 1;
+    -webkit-filter: drop-shadow(5px 5px 5px #ffffff);
+        filter: drop-shadow(1px 1px 2px #ffffff);
+    transition: .3s;
+    margin: 1em;
+}
+
+#ablogo:hover {
+    cursor: pointer;
+    max-width: 25%;
+    transition: 1s;
+}

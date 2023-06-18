@@ -47,7 +47,7 @@ a {
 #name {
   position: absolute;
   top: 0;
-  right: 10%;
+  right: 130px;
   font-size: .8rem;
   padding-top: 18px;
   margin: 0;
@@ -223,6 +223,12 @@ a {
     font-size: 2rem !important;
     margin: 0px !important;
   }
+
+  /* Git-hub Logo */
+  #gitLogo {
+    top: 10px !important;
+    left: 100px !important;
+  }
 }
 
 #imgContainer {
@@ -278,6 +284,19 @@ a {
   border-radius: .3em;
   border: 1px solid white;
 
+}
+
+#gitLogo {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  height: 25px;
+  transition: .3s;
+}
+#gitLogo:hover {
+  cursor: pointer;
+  height: 27px;
+  transition: .3s;
 }
 
 /* Section 1 (after intro section and header) */

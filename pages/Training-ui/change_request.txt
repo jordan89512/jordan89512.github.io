@@ -1,0 +1,21 @@
+*INSTRUCTIONS*
+
+Fill out a change request by simply editing this document and saving. Fill out the areas beneath content, layout or images. Include all necessary details, be as specific as possible.
+
+================================================
+Request for changes to be made:
+
+- To content:
+
+- To Layout:
+
+- To images:
+
+Other details: 
+
+
+Request made on: [DD/MM/YYYY]
+
+Response issued on: [DD/MM/YYYY]
+
+================================================

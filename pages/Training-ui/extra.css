@@ -1,0 +1,317 @@
+header {
+    /*background-image: url('assets/unsplash.jpg');
+      background-size: cover;
+     /* border: solid 1px red; /*For editing*/
+    background: black;
+    min-height: 20em; /*Sets height of header box*/
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  #header-logo {
+    margin: 0px;
+    padding: 1em;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 5em;
+    color: white;
+    text-shadow: rgb(1, 217, 255) 3px 3px 15px;
+    cursor: pointer;
+    
+  }
+  
+  #header-logo:hover {
+  
+      transition: 1s;
+      animation-name: pulse;
+    -webkit-animation-name: pulse;
+  
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+  
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+  
+  
+  nav {
+    background: linear-gradient(black, rgb(25, 0, 255), rgb(0, 247, 255));
+    /*border: solid 1px green;*/
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    min-width: 99.9%;
+    min-height: 4em;
+    max-height: 4em;
+    display: inline-flex;
+    text-align: center;
+  }
+  
+  #nav {
+    /*Link buttons - navigation*/
+    /*border: solid 1px blue;*/
+    margin: 0px;
+    padding: 1%;
+    padding-top: 2.3%; /*Moves letters of links down to center*/
+    position: relative;
+    top: 0px;
+    text-align: center;
+    color: white;
+    min-width: 5em;
+    max-width: 5em;
+  }
+  
+  
+  #nav:hover {
+  
+  border: rgb(0, 238, 255) solid 2px;
+  border-radius: 1em;
+  box-shadow: rgb(0, 238, 255) 3px 3px 15px;
+  transition: .1s;
+  
+    animation-name: pulse;
+    -webkit-animation-name: pulse;
+  
+    animation-duration: 1.5s;
+    -webkit-animation-duration: 1.5s;
+  
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+    50% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(0.9);
+      opacity: 0.7;
+    }
+  }
+  
+  @-webkit-keyframes pulse {
+    0% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+    50% {
+      -webkit-transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(0.95);
+      opacity: 0.7;
+    }
+  }
+  
+  #nav:visited {
+    color: white;
+  }
+  
+  #logo {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.349);
+  }
+  
+  
+  /*=======================*/
+  
+  /*
+  ==============================================
+  fadeIn
+  ==============================================
+  */
+  
+  .fadeIn {
+      animation-name: fadeIn;
+      -webkit-animation-name: fadeIn;
+    
+      animation-duration: 1.5s;
+      -webkit-animation-duration: 1.5s;
+    
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+    
+      visibility: visible !important;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      60% {
+        transform: scale(1.1);
+      }
+      80% {
+        transform: scale(0.9);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    @-webkit-keyframes fadeIn {
+      0% {
+        -webkit-transform: scale(0);
+        opacity: 0;
+      }
+      60% {
+        -webkit-transform: scale(1.1);
+      }
+      80% {
+        -webkit-transform: scale(0.9);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    /*
+    ==============================================
+    slideRight
+    ==============================================
+    */
+    
+    .slideRight {
+      animation-name: slideRight;
+      -webkit-animation-name: slideRight;
+    
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+    
+      animation-timing-function: ease-in-out;
+      -webkit-animation-timing-function: ease-in-out;
+    
+      visibility: visible !important;
+    }
+    
+    @keyframes slideRight {
+      0% {
+        transform: translateX(-150%);
+      }
+      50% {
+        transform: translateX(8%);
+      }
+      65% {
+        transform: translateX(-4%);
+      }
+      80% {
+        transform: translateX(4%);
+      }
+      95% {
+        transform: translateX(-2%);
+      }
+      100% {
+        transform: translateX(0%);
+      }
+    }
+    
+    @-webkit-keyframes slideRight {
+      0% {
+        -webkit-transform: translateX(-150%);
+      }
+      50% {
+        -webkit-transform: translateX(8%);
+      }
+      65% {
+        -webkit-transform: translateX(-4%);
+      }
+      80% {
+        -webkit-transform: translateX(4%);
+      }
+      95% {
+        -webkit-transform: translateX(-2%);
+      }
+      100% {
+        -webkit-transform: translateX(0%);
+      }
+    }
+    
+    /*
+    ==============================================
+    pulse
+    ==============================================
+    */
+    
+    .pulse {
+      animation-name: pulse;
+      -webkit-animation-name: pulse;
+    
+      animation-duration: 1.5s;
+      -webkit-animation-duration: 1.5s;
+    
+      animation-iteration-count: infinite;
+      -webkit-animation-iteration-count: infinite;
+    }
+    
+    @keyframes pulse {
+      0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+      50% {
+        transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(0.9);
+        opacity: 0.7;
+      }
+    }
+    
+    @-webkit-keyframes pulse {
+      0% {
+        -webkit-transform: scale(0.95);
+        opacity: 0.7;
+      }
+      50% {
+        -webkit-transform: scale(1);
+        opacity: 1;
+      }
+      100% {
+        -webkit-transform: scale(0.95);
+        opacity: 0.7;
+      }
+    }
+    
