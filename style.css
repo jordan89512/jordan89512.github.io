@@ -1,259 +1,332 @@
 html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 200%;
-    text-align: center;
-    color: aliceblue;
-    background-image: linear-gradient(#242424, rgb(0, 0, 0));
-    background-repeat: no-repeat;
-    background-size: auto 200%;
-    font-family: sans-serif, Arial, Helvetica;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 200%;
+  text-align: center;
+  color: aliceblue;
+  background-image: linear-gradient(#242424, rgb(0, 0, 0));
+  background-repeat: no-repeat;
+  background-size: auto 200%;
+  font-family: sans-serif, Arial, Helvetica;
 }
 
 a {
-    text-decoration: none;
-    color: aliceblue;
-    margin: 0;
-    padding: 0;
+  text-decoration: none;
+  color: aliceblue;
+  margin: 0;
+  padding: 0;
 }
 
 
 #hdr {
-    position: absolute;
-    top: 0px;
-    /* background-image: url(./assets/images/pexels-pixabay-159027.jpg); */
-    background-position-y: 90%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    min-height: 95%;
-    max-height: 95%;
-    min-width: 100%;
-    max-width: 100%;
-    box-shadow: 0px 0px 50px 1px #454eff;
+  position: absolute;
+  top: 0px;
+  background-position-y: 90%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 95%;
+  max-height: 95%;
+  min-width: 100%;
+  max-width: 100%;
+  box-shadow: 0px 0px 30px 1px #454eff;
+  border-bottom: 1px solid black;
 
 }
 
 /* --- */
 
 #name {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  font-size: .8rem;
+  padding-top: 18px;
+  margin: 0;
+}
+
+/* Appearance of Top Navigation bar */
+#topnav {
+  padding-left: 3%;
+  box-shadow: 0px 0px 30px 1px #454eff;
+  min-height: 50px;
+  z-index: 999;
+}
+
+.dropbtn:hover {
+  cursor: pointer;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #000000;
+  box-shadow: inset 0px 0px 15px 0px #979dffa0;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 15px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 15px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #000000;
+  /*Sets background of dropdown menu*/
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.231);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: rgb(255, 255, 255);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.topnav a:hover,
+.dropdown:hover .dropbtn {
+  background-color: #454eff;
+  color: white;
+}
+
+.dropdown-content a:hover {
+  background-color: #454eff;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 650px) {
+
+  .topnav a:not(:first-child),
+  .dropdown .dropbtn {
+    display: none;
+  }
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav a {
+    font-size: .9rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .topnav.responsive {
+    position: relative;
+  }
+
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .topnav.responsive .dropdown {
+    float: none;
+  }
+
+  .topnav.responsive .dropdown-content {
+    position: relative;
+    max-width: 96.5%;
+  }
+
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-size: .9rem;
+  }
+
+  /* For "Dev Portfolio" text in top nav bar */
+  #name {
     position: absolute;
     top: 0;
     right: 10%;
     font-size: .8rem;
-    padding-top: 18px;
-    margin: 0;
-}
-
-#topnav{
-    padding-left: 3%;
-    box-shadow: 0px 0px 30px 10px #454eff;
-    min-height: 50px;
-    z-index: 999;
-}
-
-.dropbtn:hover {
-    cursor: pointer;
-}
-
-.topnav {
-    overflow: hidden;
-    background-color: #000000;
-    box-shadow: inset 0px 0px 15px 0px #979dffa0;
-  }
-  
-  .topnav a {
-    float: left;
-    display: block;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 15px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  .active {
-    background-color: #04AA6D;
-    color: white;
-  }
-  
-  .topnav .icon {
-    display: none;
-  }
-  
-  .dropdown {
-    float: left;
-    overflow: hidden;
-  }
-  
-  .dropdown .dropbtn {
-    font-size: 17px;    
-    border: none;
-    outline: none;
-    color: white;
-    padding: 15px 16px;
-    background-color: inherit;
-    font-family: inherit;
+    padding-top: 17px;
     margin: 0;
   }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #000000; /*Sets background of dropdown menu*/
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.231);
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    float: none;
-    color: rgb(255, 255, 255);
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-    font-size: 1rem;
-  }
-  
-  .topnav a:hover, .dropdown:hover .dropbtn {
-    background-color: #454eff;
-    color: white;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: #454eff;
-    color: white;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block;
-  }
-  
-  @media screen and (max-width: 650px) {
-    .topnav a:not(:first-child), .dropdown .dropbtn {
-      display: none;
-    }
-    .topnav a.icon {
-      float: right;
-      display: block;
-    }
-    .topnav a {
-        font-size: .9rem;
-    }
-  }
-  
-  @media screen and (max-width: 650px) {
-    .topnav.responsive {position: relative;}
-    .topnav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-    .topnav.responsive .dropdown {float: none; }
-    .topnav.responsive .dropdown-content {position: relative; max-width: 96.5%; }
-    .topnav.responsive .dropdown .dropbtn {
-      display: block;
-      width: 100%;
-      text-align: left;
-      font-size: .9rem;
-    }
-    #name {
-        position: absolute;
-        top: 0;
-        right: 10%;
-        font-size: .8rem;
-        padding-top: 17px;
-        margin: 0;
-    }
 
-    .name {
-      font-size: 1rem !important;
-      left: 60% !important;
-    }
-    .developer {
-      font-size: 1.2rem !important;
-      top: 30px !important;
-    }
-    .greeting {
-      top: 10% !important;
-      left: 57% !important;
-      font-size: 2rem !important;
-    }
-  }
-
-  #imgContainer {
-    background-image: url(/assets/images/profile-pic\ \(2\).png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    min-height: 30%;
-    max-height: 30%;
-    max-width: 50%;
-    position: relative;
-    top: 10%;
-    left: 25%;
-    filter: drop-shadow(-5px 5px 5px black)
-  }
-
-  #hello {
-    min-height: 80px;
-    max-height: 100px;
-    max-width: 400px;
-    min-width: 260px;
-    position: relative;
-    left: 32%;
-    top: 150px;
-    background-color: #454eff;
-    border-radius: 1em;
-    box-shadow: -5px 5px 15px 5px black;
-    text-align: center;
-  }
-
-  .greeting {
-    position: absolute;
-    top: 14%;
-    left: 52%;
-    font-size: 3rem;
-    z-index: 3;
-    text-shadow: #000000 -3px 2px 5px;
-  }
-
+  /* For sm ver of "Jordan Roberts" intro */
   .name {
-    position: absolute;
-    top: 25%;
-    left: 51%;
-    font-weight: bolder;
-    font-size: 2rem;
-    padding: 20px;
-    background-image: linear-gradient(to right, blue, #45ff89);
-    border-radius: .6em;
-    text-shadow: -5px 2px 5px black;
-    box-shadow: -5px 5px 15px 5px black;
-    z-index: 2;
-    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 1rem !important;
+    left: 60% !important;
+    top: 24% !important;
+    margin: 0px !important;
   }
 
   .developer {
-    position: relative;
-    top: 25px;
-    left: 0px;
-    min-width: 200px;
-    min-height: 40px;
-    max-height: 40px;
-    text-shadow: -2px 1px 2px black;
-    font-size: 1.8rem;
-    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem !important;
+    min-width: 80% !important;
+    top: 75% !important;
+    left: 10% !important;
+    padding: 5px !important;
   }
+
+  .greeting {
+    top: 15% !important;
+    left: 57% !important;
+    font-size: 2rem !important;
+    margin: 0px !important;
+  }
+}
+
+#imgContainer {
+  background-image: url(/assets/images/profile-pic\ \(2\).png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  min-height: 25%;
+  max-height: 30%;
+  max-width: 50%;
+  position: relative;
+  top: 13%;
+  left: 25%;
+  filter: drop-shadow(-5px 5px 5px black)
+}
+
+.greeting {
+  position: absolute;
+  top: 22%;
+  left: 52%;
+  font-size: 3rem;
+  z-index: 3;
+  text-shadow: #000000 -3px 2px 5px;
+}
+
+.name {
+  position: absolute;
+  top: 35%;
+  left: 51%;
+  font-weight: bolder;
+  font-size: 2rem;
+  padding: 10px;
+  padding-inline: 30px;
+  background-image: linear-gradient(to right, blue, #45ff89);
+  border-radius: .6em;
+  text-shadow: -5px 2px 5px black;
+  box-shadow: -5px 5px 15px 5px black;
+  z-index: 2;
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.developer {
+  position: absolute;
+  top: 55%;
+  left: 45%;
+  min-width: 200px;
+  max-height: 80px;
+  box-shadow: -2px 1px 10px #8cff88;
+  font-size: 2rem;
+  font-family: 'Courier New', Courier, monospace;
+  z-index: 3;
+  background: black;
+  padding: 10px;
+  border-radius: .3em;
+  border: 1px solid white;
+
+}
+
+/* Section 1 (after intro section and header) */
+
+#section1 {
+  border: 1px solid red;
+  position: relative;
+  top: 25%;
+  min-height: 100vh;
+}
+#projectContainer {
+  border: 1px solid greenyellow;
+  max-width: 80vw;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  min-height: 100px;
+}
+.projectImage1, .projectImage2, .projectImage3, .projectImage4 {
+  border: 1px solid white;
+  /* Spacing between project images */
+  margin: 2px;
+}
+.projectImage1:hover, .projectImage2:hover, .projectImage3:hover, .projectImage4:hover {
+  cursor: pointer;
+  border: 2px solid greenyellow;
+}
+
+.projectImage1 {
+  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.projectImage2 {
+  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.projectImage3 {
+  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.projectImage4 {
+  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

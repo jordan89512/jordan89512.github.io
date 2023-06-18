@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +8,11 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body>
-    
-    <header id="hdr">
 
+<body>
+
+    <!-- Navbar -->
+    <header id="hdr">
         <nav id="nav" role="navigation">
             <div class="topnav" id="topnav">
                 <a href="#home">Home</a>
@@ -26,18 +28,32 @@
                         <a href="#">Link 3</a>
                     </div>
                 </div>
-                
+
                 <p id="name">Jordan Roberts - Dev Portfolio</p>
                 <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="dropFunction()">&#9776;</a>
             </div>
         </nav>
     </header>
-    <p class="greeting">Hi, I'm</p>
-    <p class="name">Jordan Roberts</p>
-    <div id="imgContainer">
-        <div id="hello"><p class="developer">Full-Stack Developer</p></div>
-    </div>
 
+    <!-- Introduction -->
+    <h1 class="greeting">Hi, I'm</h1>
+    <h2 class="name">Jordan Roberts</h2>
+    <h3 class="developer">Full-Stack Developer_</h3>
+
+    <!-- Profile Image -->
+    <div id="imgContainer"></div>
+
+    <section id="section1">
+        <h3>section 1</h3>
+        <div id="projectContainer">
+            <!-- Grid Layout for Project images -->
+            <div class="projectImage1"></div>
+            <div class="projectImage2"></div>
+            <div class="projectImage3"></div>
+            <div class="projectImage4"></div>
+        </div>
+    </section>
     <script src="./main.js"></script>
 </body>
+
 </html>
