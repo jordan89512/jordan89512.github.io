@@ -10,12 +10,16 @@ body {
   padding: 0;
   width: 100%;
   height: 200%;
+  max-height: fit-content;
   text-align: center;
   color: aliceblue;
   background-image: linear-gradient(#242424, rgb(0, 0, 0));
   background-repeat: no-repeat;
   background-size: auto 200%;
   font-family: sans-serif, Arial, Helvetica;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 a {
@@ -191,6 +195,12 @@ a {
     font-size: .9rem;
   }
 
+  .aboutMe {
+    font-size: 2.3vw !important;
+    padding: 20px !important;
+    text-align: center !important;
+  }
+
   /* For "Dev Portfolio" text in top nav bar */
   #name {
     position: absolute;
@@ -302,50 +312,121 @@ a {
 /* Section 1 (after intro section and header) */
 
 #section1 {
-  border: 1px solid red;
   position: relative;
   top: 25%;
-  min-height: 100vh;
+  min-height: fit-content;
+  min-width: fit-content;
+  padding-bottom: 100px;
+  margin-top: 100px;
 }
 #projectContainer {
-  border: 1px solid greenyellow;
-  max-width: 80vw;
+  /* border: 1px solid greenyellow; */
+  max-width: 95vw;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  min-height: 100px;
+  min-height: 50%;
+  min-width: fit-content;
+}
+
+.imgbanner {
+  position: relative;
+  /* top: 30%; */
+  top: 80px;
+  background: rgba(0, 0, 0, 0.753);
+  padding: 1em;
+  font-weight: 900;
+  font-size: 80%;
+  overflow: hidden;
+}
+.imgbanner:hover {
+  box-shadow: #40ff00 0px 2px 10px;
+  transition: .2s;
 }
 .projectImage1, .projectImage2, .projectImage3, .projectImage4 {
-  border: 1px solid white;
   /* Spacing between project images */
   margin: 2px;
+  min-width: 80%;
+  min-height: 200px;
+  max-height: 99%;
 }
 .projectImage1:hover, .projectImage2:hover, .projectImage3:hover, .projectImage4:hover {
   cursor: pointer;
-  border: 2px solid greenyellow;
+  box-shadow: inset 150px 100px 100px 100px rgba(60, 0, 129, 0.459);
+  box-shadow: #00ff40a1 5px 5px 15px;
+  transition: .2s;
 }
 
 .projectImage1 {
-  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-image: url(/assets/images/qcalc.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .projectImage2 {
-  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-image: url(/assets/images/webdevnexussite.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .projectImage3 {
-  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-image: url(/assets/images/abpmt.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .projectImage4 {
-  background-image: url(/assets/images/pexels-pixabay-159027.jpg);
+  background-image: url(/assets/images/codepen.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Section 2 - Background */
+#section2 {
+  position: relative;
+  top: 25%;
+  background-image: linear-gradient(black, #242424);
+  padding: 3%;
+}
+
+#container2 {
+  min-height: 500px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0px 0px 30px 1px #454eff;
+  margin-bottom: 150px;
+}
+.sec2box {
+  border: 1px solid white;
+  border-top: 0px;
+  border-bottom: 0px;
+  border-radius: .3em;
+  background-color: black;
+}
+.aboutMe {
+  padding: 50px;
+  font-size: 1.5vw;
+  text-align: justify;
+  overflow-y: scroll;
+  max-height: 400px;
+}
+.aboutMe::-webkit-scrollbar {
+  display: none;
+}
+
+/* Footer */
+
+footer {
+  position: relative;
+  top: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  min-height: 200px;
+  background: black;
+  padding: 20px;
+}
+.footerBox {
+  /* border: 1px solid white; */
+  height: 100%;
 }
